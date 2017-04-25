@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 // Custom providers
 import { BluetoothDevices} from '../providers/BluetoothDevices';
 import { LedManager } from '../providers/LedManager';
+import { LocalStorage } from '../providers/local-storage';
 // Custom pages
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -32,7 +33,8 @@ import { About } from '../pages/about/about';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BluetoothDevices,
-    LedManager
+    LedManager,
+    LocalStorage
   ]
 })
 export class AppModule {}

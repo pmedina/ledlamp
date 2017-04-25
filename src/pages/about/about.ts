@@ -15,13 +15,15 @@ import { LedManager } from '../../providers/LedManager';
 })
 export class About {
 
-  private _ledManager: LedManager
+  public test: string = "Test"
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public ledManager: LedManager) {
-      this._ledManager = ledManager;
+      console.debug(navParams);
+      this.test = navParams.data.name;
+      // object is actually in navParams.data
   }
 
   // This happens when the component is loaded, not rendered!
@@ -30,8 +32,6 @@ export class About {
   }
 
   home(){
-    console.log("changing: in about it was set:"+this.ledManager.gettest());
-    this._ledManager.settest("from about");
     this.navCtrl.pop();
   }
 

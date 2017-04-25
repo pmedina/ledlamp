@@ -76,6 +76,16 @@ export class LedManager{
                 return this.ledModel[index];
             }
         }
+        throw new TypeError("Not found led with ID:"+id);
+        
+        // or? more elegant
+        /*this.ledModel.filter(function(led){
+            if(led.ledId == id){
+                return led;
+            }
+        });
+        throw new TypeError("Not found led with ID:"+id);
+        */
     }
 
     setLedStatus(id: string, properties: any){

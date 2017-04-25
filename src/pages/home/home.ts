@@ -44,12 +44,9 @@ export class HomePage {
   }
 
   about(){
-    //this.navCtrl.pop();
-    console.log("changing: in home it was set:"+this.ledManager.gettest());
-    //this.ledManager.settest("from home");
-    //this.navCtrl.push(About);
     let myled = this.ledManager.getLedById("04");
     console.debug(myled);
+    this.navCtrl.push(About, {name: "the Title", description: "The description"});
   }
 
 }
