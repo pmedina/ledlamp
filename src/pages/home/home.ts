@@ -3,8 +3,6 @@ import { NavController, Platform } from 'ionic-angular';
 import { BluetoothDevices } from '../../providers/BluetoothDevices';
 import { LedManager } from '../../providers/LedManager';
 
-// Pages
-import  { About } from '../about/about';
 
 // Native Storage
 import { NativeStorage } from '@ionic-native/native-storage';
@@ -41,7 +39,6 @@ export class HomePage {
     console.debug(this.navCtrl);
     console.debug(this.devicesManager);
     console.debug(this.ledManager);
-    this.navCtrl.push(About);
   }
 
   // This happens when the component is loaded, not rendered!
@@ -52,7 +49,7 @@ export class HomePage {
   about(){
     let myled = this.ledManager.getLedById("04");
     console.debug(myled);
-    this.navCtrl.push(About, {name: "the Title", description: "The description"});
+    //this.navCtrl.push(About, {name: "the Title", description: "The description"});
   }
 
 }

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
-import { About } from './about';
+import { Settings } from './settings';
 
 @NgModule({
   declarations: [
-    About,
+    Settings,
   ],
   imports: [
-    //IonicModule.forChild(About),
+    //IonicModule.forChild(Settings),
   ],
   exports: [
-    About
+    Settings
   ]
 })
-export class AboutModule {}
+export class SettingsModule {}

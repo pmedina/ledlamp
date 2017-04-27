@@ -8,9 +8,9 @@ import { BluetoothDevices} from '../providers/BluetoothDevices';
 import { LedManager } from '../providers/LedManager';
 import { LocalStorage } from '../providers/local-storage';
 // Custom pages
+import { Main } from '../pages/main/main';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { About } from '../pages/about/about';
 
 // Cordova plugins
 import { NativeStorage } from '@ionic-native/native-storage';
@@ -19,17 +19,18 @@ import { NativeStorage } from '@ionic-native/native-storage';
   declarations: [
     MyApp,
     HomePage,
-    About
+    Main
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp)
+    //IonicModule.forRoot(Main)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    About
+    Main
   ],
   providers: [
     StatusBar,

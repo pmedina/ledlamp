@@ -6,11 +6,14 @@ import { BluetoothDevices} from '../providers/BluetoothDevices';
 import { LedManager} from '../providers/LedManager';
 
 import { HomePage } from '../pages/home/home';
+import { Main } from '../pages/main/main';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  //rootPage:any = HomePage;
+  rootPage:any = Main;
 
   constructor(
     platform: Platform, 
