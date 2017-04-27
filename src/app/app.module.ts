@@ -12,6 +12,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { About } from '../pages/about/about';
 
+// Cordova plugins
+import { NativeStorage } from '@ionic-native/native-storage';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +37,8 @@ import { About } from '../pages/about/about';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BluetoothDevices,
     LedManager,
-    LocalStorage
+    LocalStorage,
+    NativeStorage
   ]
 })
 export class AppModule {}

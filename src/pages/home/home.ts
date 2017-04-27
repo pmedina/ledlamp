@@ -6,6 +6,9 @@ import { LedManager } from '../../providers/LedManager';
 // Pages
 import  { About } from '../about/about';
 
+// Native Storage
+import { NativeStorage } from '@ionic-native/native-storage';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -20,10 +23,13 @@ export class HomePage {
     navCtrl: NavController, 
     devicesService: BluetoothDevices,
     platform: Platform,
-    ledManager: LedManager
+    ledManager: LedManager,
+    nativeStorage: NativeStorage
     ) {
       platform.ready().then(() => {
         console.log("platform ready");
+        console.debug(nativeStorage);
+        nativeStorage.setItem("ola", {ledModel: ledManager.getLedModel()});
         this.navCtrl = navCtrl;
         this.ledManager = ledManager;
         this.devicesManager = devicesService;
